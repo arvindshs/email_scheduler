@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Scheduler</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="theme-jala">
+    <main class="wrapper">
+        <section class="left">
+            <div class="content">
+                <h1>Email Scheduler</h1>
+                <p>
+                    Plan and send your messages at the perfect time.<br />
+                    Smart scheduling, modern design — all in one click.
+                </p>
+
+                <!-- 🌈 Theme toggle button -->
+                <button id="themeToggle" class="theme-btn">❄️ Theme: Jala</button>
+            </div>
+        </section>
+
+        <section class="right">
+            <div class="form-card">
+                <h2>📅 Schedule Your Email</h2>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Receiver Email" />
+
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" placeholder="Subject" />
+
+                <label for="message">Message</label>
+                <textarea id="message" placeholder="Type your message..."></textarea>
+
+                <label for="scheduleTime">Schedule Time</label>
+                <input type="datetime-local" id="scheduleTime" />
+
+                <button onclick="sendEmail()">Send</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>© 2025 Email Scheduler | Designed by Arvind</footer>
+
+    <!-- 🧿 Secret admin access (Ctrl + Shift + A) -->
+    <script>
+        document.addEventListener("keydown", (e) => {
+            if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "a") {
+                window.location.href = "admin.html";
+            }
+        });
+
+          const messageBox = document.getElementById("message");
+            messageBox.addEventListener("input", () => {
+                messageBox.style.height = "auto"; // Reset height
+                messageBox.style.height = messageBox.scrollHeight + "px"; // Expand dynamically
+            });
+        const themes = [
+            { class: "theme-jala", name: "Jala", symbol: "❄️" },
+            { class: "theme-vidyu", name: "Vidyu", symbol: "⚡" },
+            { class: "theme-pavana", name: "Pavana", symbol: "🌪️" },
+            { class: "theme-chandra", name: "Chandra", symbol: "🌕" },
+            { class: "theme-tamas", name: "Tamas", symbol: "🕳️" }
+        ];
+
+        let i = 0;
+        const toggle = document.getElementById("themeToggle");
+
+        toggle.addEventListener("click", () => {
+            document.body.classList.remove(themes[i].class);
+            i = (i + 1) % themes.length;
+            document.body.classList.add(themes[i].class);
+            toggle.innerText = `${themes[i].symbol} Theme: ${themes[i].name}`;
+        });
+    </script>
+</body>
+
+</html>

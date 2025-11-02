@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="admin.css">
+  <title>Admin Dashboard</title>
+</head>
+<body class="theme-agni">
+  <header>
+    <h2>📧 Admin Email Dashboard</h2>
+    <button id="themeToggle">🜂 Theme: Agni</button>
+  </header>
+
+  <div class="dashboard">
+    <div class="panel">
+      <button onclick="getemail()">Get All Mails</button>
+      <div id="mail"></div>
+    </div>
+
+    <div class="panel">
+      <label>Type Mail ID to Delete</label>
+      <input type="number" id="num" placeholder="Enter Mail ID">
+      <button onclick="deletemaill()">Delete Mail</button>
+    </div>
+  </div>
+
+  <button id="returnBtn" onclick="window.location.href='index.html'">⟵ Back to Scheduler</button>
+
+  <footer>© 2025 Admin Panel | Designed by Arvind</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

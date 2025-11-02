@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.5s ease;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* === HEADER === */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: min(950px, 95%);
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.8rem;
+}
+
+#themeToggle {
+    border: none;
+    border-radius: 8px;
+    padding: 0.6rem 1.2rem;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* === DASHBOARD === */
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    width: min(950px, 95%);
+}
+
+.panel {
+    border-radius: 16px;
+    padding: 1.5rem;
+    backdrop-filter: blur(8px);
+}
+
+button {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+input {
+    width: 100%;
+    padding: 0.7rem;
+    border-radius: 6px;
+    border: 1px solid;
+    outline: none;
+    margin-top: 0.5rem;
+    color: #fff;
+}
+
+/* === FOOTER === */
+footer {
+    margin-top: 3rem;
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+#returnBtn {
+    margin-top: 2rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+/* ===================== THEMES ===================== */
+
+/* 🔥 AGNI */
+.theme-agni {
+    background: radial-gradient(circle at top left, #2b0000, #000);
+    color: #ffb3b3;
+}
+
+.theme-agni .panel {
+    background: rgba(255, 40, 0, 0.07);
+    border: 1px solid rgba(255, 60, 60, 0.3);
+}
+
+.theme-agni button {
+    background: linear-gradient(90deg, #ff3b00, #ff004c);
+    color: #fff;
+}
+
+.theme-agni input {
+    border-color: rgba(255, 80, 80, 0.5);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* 🌊 VARUNA */
+.theme-varuna {
+    background: radial-gradient(circle at bottom right, #001f3f, #000);
+    color: #c2e8ff;
+}
+
+.theme-varuna .panel {
+    background: rgba(0, 80, 255, 0.07);
+    border: 1px solid rgba(0, 200, 255, 0.3);
+}
+
+.theme-varuna button {
+    background: linear-gradient(90deg, #009dff, #00d4ff);
+    color: #fff;
+}
+
+.theme-varuna input {
+    border-color: rgba(0, 200, 255, 0.4);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* 🌬️ VAYU */
+.theme-vayu {
+    background: linear-gradient(180deg, #f8fcff, #ddecf7);
+    color: #0a2540;
+}
+
+.theme-vayu .panel {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.theme-vayu button {
+    background: linear-gradient(90deg, #0a6cff, #66b3ff);
+    color: #fff;
+}
+
+.theme-vayu input {
+    border-color: #99c2ff;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+/* 🌱 PRITHVI */
+.theme-prithvi {
+    background: radial-gradient(circle, #1b3a20, #000);
+    color: #c8ffb0;
+}
+
+.theme-prithvi .panel {
+    background: rgba(0, 100, 0, 0.2);
+    border: 1px solid #4caf50;
+}
+
+.theme-prithvi button {
+    background: linear-gradient(90deg, #4caf50, #8bc34a);
+    color: #fff;
+}
+
+.theme-prithvi input {
+    border-color: #81c784;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* 💫 AKASHA */
+.theme-akasha {
+    background: radial-gradient(circle at center, #0d013a, #000010 80%);
+    color: #d6c4ff;
+}
+
+.theme-akasha .panel {
+    background: rgba(90, 0, 255, 0.07);
+    border: 1px solid rgba(160, 100, 255, 0.3);
+}
+
+.theme-akasha button {
+    background: linear-gradient(90deg, #5b00ff, #c400ff);
+    color: #fff;
+}
+
+.theme-akasha input {
+    border-color: rgba(180, 120, 255, 0.4);
+    background: rgba(255, 255, 255, 0.05);
+}
+

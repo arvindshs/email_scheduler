@@ -1,0 +1,155 @@
+/* ---------- Layout ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    transition: background 0.8s ease, color 0.5s ease;
+}
+
+.wrapper {
+    display: flex;
+    height: 100vh;
+}
+
+/* ---------- Left Section ---------- */
+.left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.content {
+    max-width: 420px;
+}
+
+.content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* ---------- Right Section ---------- */
+.right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.form-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 2rem 3rem;
+    width: 380px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.form-card h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.form-card label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: 500;
+}
+
+.form-card input,
+.form-card textarea {
+    width: 100%;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 8px;
+    margin-top: 0.3rem;
+    outline: none;
+    background: rgba(255, 255, 255, 0.3);
+    color: inherit;
+}
+
+.form-card button {
+    margin-top: 1.5rem;
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.form-card button:hover {
+    background: #0056b3;
+}
+
+/* ---------- Footer ---------- */
+footer {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+
+/* ---------- Theme Toggle Button ---------- */
+.theme-btn {
+    margin-top: 2rem;
+    padding: 0.8rem 1.8rem;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(90deg, #00aaff, #00ccff);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 204, 255, 0.4);
+    transition: all 0.3s ease;
+}
+.form-card {
+    transition: height 0.3s ease, padding 0.3s ease;
+    overflow: hidden;
+}
+.theme-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 204, 255, 0.5);
+}
+
+.theme-jala {
+    background: linear-gradient(135deg, #c9e9ff, #90caff);
+    color: #033b63;
+}
+
+.theme-vidyu {
+    background: linear-gradient(135deg, #2b1055, #7597de);
+    color: #eaf2ff;
+}
+
+.theme-pavana {
+    background: linear-gradient(135deg, #7f8c8d, #2c3e50);
+    color: #f5f5f5;
+}
+
+.theme-chandra {
+    background: linear-gradient(135deg, #ffffff, #e0e0e0);
+    color: #222;
+}
+
+.theme-tamas {
+    background: linear-gradient(135deg, #000000, #1a1a1a);
+    color: #e0e0e0;
+}
