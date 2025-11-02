@@ -33,8 +33,8 @@ A production-ready **Spring Boot + MySQL + JavaMail** project for automating ema
 
 ### 2️⃣ Clone the Repository
 ```bash
-git clone https://github.com/<your-username>/<your-repo>.git
-cd <your-repo>
+git clone https://github.com/arvindshs/email_scheduler.git
+cd email_scheduler
 
 💾 Install Maven Dependencies
 mvn clean install
