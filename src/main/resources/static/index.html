@@ -76,6 +76,34 @@
             document.body.classList.add(themes[i].class);
             toggle.innerText = `${themes[i].symbol} Theme: ${themes[i].name}`;
         });
+        const URL = "http://localhost:8080/emails";
+
+            const sendEmail = async () => {
+                const mail = {
+                    email: document.getElementById("email").value,
+                    subject: document.getElementById("subject").value,
+                    message: document.getElementById("message").value,
+                    status: "PENDING",
+                    sechedaLocalDateTime: document.getElementById("scheduleTime").value
+                }
+                try {
+                    const response = await fetch(`${URL}/post`, {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify(mail)
+                    });
+                    if (response.ok) {
+                        alert("message sent seccufully")
+                    } else {
+                        alert("failed to sent")
+                    }
+
+
+                } catch (error) {
+                    console.log("not been sent", error);
+
+                }
+            } 
     </script>
 </body>
 
