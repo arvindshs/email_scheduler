@@ -76,7 +76,7 @@
             document.body.classList.add(themes[i].class);
             toggle.innerText = `${themes[i].symbol} Theme: ${themes[i].name}`;
         });
-        const URL = "http://localhost:8080/emails";
+        const URL = "https://emailscheduler-production-c3d0.up.railway.app/emails";
 
             const sendEmail = async () => {
                 const mail = {
