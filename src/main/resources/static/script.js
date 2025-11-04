@@ -1,4 +1,4 @@
-const URL = "http://localhost:8080/emails";
+const URL = "emailscheduler-production-c3d0.up.railway.app/emails";
 
 const sendEmail = async () => {
     const mail= {
