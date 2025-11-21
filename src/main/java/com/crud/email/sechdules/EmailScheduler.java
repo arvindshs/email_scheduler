@@ -22,7 +22,8 @@ public class EmailScheduler {
     private JavaMailSender javaMailSender;
     @Value("${spring.mail.username}")
     private String fromEmail;
-    @Scheduled(cron = "* * 10 * * *")
+    @Scheduled(cron = "0 0 18 * * *", zone = "Asia/Kolkata")
+
     public void schedulingemail(){
         List<User> mails =  emailService.findpendingEmails();
 
